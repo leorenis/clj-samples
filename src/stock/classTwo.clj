@@ -18,4 +18,4 @@
     raw-value))
 
 (ten-percent-discounted 1000)
-(ten-percent-discounted 100)
+(println "No discount" (ten-percent-discounted 100))
