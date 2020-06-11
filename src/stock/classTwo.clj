@@ -2,7 +2,7 @@
 
 (defn print-message []
   (println "### SystemX ###")
-  (println "Welcome to Storing."))
+  (println "Welcome to Stock."))
 
 
 (print-message)
