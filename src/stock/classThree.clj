@@ -24,3 +24,10 @@
 (println (ten-percent-discounted (fn [v] (> v 100)) 1100))  ;; abbreviation symbol name
 (println (ten-percent-discounted #(> %1 100) 1500 ))        ;; %1 represents first argument as %2 would represent second...
 (println (ten-percent-discounted #(> % 100) 1600 ))         ;; If we have only one argument, we can use just %.
+
+; Midterm
+(def more-expensive-than-100? (fn [raw-value] (> raw-value 100))) ; We are defining a symbol e assigning a anonymous function.
+(def more-expensive-than-100? #(> % 100)) ; Or simply
+
+; Calling
+(println (ten-percent-discounted more-expensive-than-100? 3000))
