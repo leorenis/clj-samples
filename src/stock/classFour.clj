@@ -30,3 +30,8 @@
 
 
 (println "map" (map ten-percent-discounted prices))
+(println (range 10))
+(println (filter even? (range 10)))
+
+(println "Filter when greater 100" (filter apply? prices))
+(println "Discount applied after filter greater than 100 values" (map ten-percent-discounted (filter apply? prices)))
