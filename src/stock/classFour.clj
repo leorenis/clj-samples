@@ -35,3 +35,14 @@
 
 (println "Filter when greater 100" (filter apply? prices))
 (println "Discount applied after filter greater than 100 values" (map ten-percent-discounted (filter apply? prices)))
+
+(println prices)
+(println (reduce + prices))
+
+(defn my-sum
+  "Sum two values"
+  [value, other-value]
+  (println "+" value other-value)
+  (+ value other-value))
+
+(println (reduce my-sum (range 10)))
