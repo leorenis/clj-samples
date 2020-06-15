@@ -15,3 +15,18 @@
 (println (inc 5))                                           ; inc function return the value + 1. Increase.
 (println (update prices 0 inc))
 (println (update prices 1 dec))
+
+
+(def apply? #(> % 100))
+
+(defn ten-percent-discounted
+  "Returns the value with discount of 10% when have to apply discount."
+  [raw-value]
+  (if (apply? raw-value)
+    (let [discount-rate (/ 10 100)                          ;; Multiples declarations in let...
+          discount (* raw-value discount-rate)]
+      (- raw-value discount))
+    raw-value))
+
+
+(println "map" (map ten-percent-discounted prices))
