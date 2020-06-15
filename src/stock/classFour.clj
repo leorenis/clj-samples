@@ -37,7 +37,7 @@
 (println "Discount applied after filter greater than 100 values" (map ten-percent-discounted (filter apply? prices)))
 
 (println prices)
-(println (reduce + prices))
+(println (reduce + prices))                                 ; Reducing values to one element.
 
 (defn my-sum
   "Sum two values"
@@ -46,3 +46,9 @@
   (+ value other-value))
 
 (println (reduce my-sum (range 10)))
+(println (reduce my-sum [15]))
+(println (reduce my-sum [15]))                              ; When have only one element, reduce returns this element.
+
+(println (reduce my-sum 0 [15]))                            ; Passing initial value. Zero in this case.
+(println (reduce my-sum 0 []))                              ; When empty array, returns initial value.
+(println (reduce my-sum []))                                ; If does not have initial value and empty value, throws an Exception.
