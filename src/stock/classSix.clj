@@ -49,7 +49,7 @@
 
 
 ; A little bit more polite function
-(defn products-total-price [product]                            ; Ignoring key with blank identifier.
+(defn products-total-price [product]                        ; Ignoring key with blank identifier.
   (* (:amount product) (:price product)))
 
 (defn total-by-order
@@ -59,3 +59,14 @@
        (map products-total-price)
        (reduce +)))
 (println (total-by-order order))
+
+
+
+; Filter
+(def order {:bag    {:amount 10 :price 80}
+            :t-shirt {:amount 3 :price 60}
+            :coffee-mug {:amount 1}})
+(defn free?
+  [product]
+  (<= (get product :price 0) 0))
+(println (free? (:coffee-mug order)))                       ; Like a test rsr
