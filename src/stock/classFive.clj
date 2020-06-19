@@ -17,3 +17,14 @@
 (println (update stock :bag less-one))
 (println (update stock :skirt #(- % 1)))
 (println (dissoc stock :sock))
+
+
+(def order {:bag { :amount 10 :price 80}
+            :tshirt {:amount 3 :price 60}})
+
+(println order)
+(println (order :bag))                                      ; using map as function
+(println (get order :bag))                                  ; using get function... More safely
+(println (get order :bag {}))                               ; get with default value
+(println (:amount (:bag order)))
+(println (:amount (:chair order {})))                       ; Trying to access the  order's keywords :chair, :amount, if does not exists, take empty object. Like {}
