@@ -1,6 +1,6 @@
 (ns stock.classFive)
 
-(def stock { :bag 10, :skirt 5, :chair 3})                            ; Using keyword as key
+(def stock {:bag 10, :skirt 5, :chair 3})                   ; Using keyword as key
 (println stock)
 (println "We have" (count stock) "elements")
 (println "Keys are:" (keys stock))
@@ -19,7 +19,7 @@
 (println (dissoc stock :sock))
 
 
-(def order {:bag { :amount 10 :price 80}
+(def order {:bag    {:amount 10 :price 80}
             :tshirt {:amount 3 :price 60}})
 
 (println order)
@@ -39,3 +39,10 @@
            :amount))
 
 (-> order :bag :amount println)
+
+
+(def
+  customers {:15 {:name "Julia" :certificates ["Clojure" "Java" "Machine Learning"]}})
+
+(println (count (:certificates (:15 customers))))
+(-> customers :15 :certificates count println)
