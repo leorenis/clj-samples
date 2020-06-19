@@ -63,13 +63,13 @@
 
 
 ; Filter
-(def order {:bag    {:amount 10 :price 80}
-            :t-shirt {:amount 3 :price 60}
+(def order {:bag        {:amount 10 :price 80}
+            :t-shirt    {:amount 3 :price 60}
             :coffee-mug {:amount 1}})
 (defn free?
   [[key value]]
   (<= (get value :price 0) 0))
-(println (free? (first order)))                       ; Like a test rsr
+(println (free? (first order)))                             ; Like a test rsr
 (println "Filtering free products")
 (println (filter free? order))
 
@@ -93,3 +93,37 @@
 (def paid? (comp not free?))                                ; Symbol paid
 (println (paid? {:price 10}))
 (println (paid? {:price 0}))
+
+
+; Exercises
+; -> Map Reduce
+(def customers [{:name         "Pedro"
+                 :certificates ["Clojure" "Java" "Machine Learning"]}
+                {:name         "Joana"
+                 :certificates ["Java" "Ciência da Computação"]}
+                {:name         "Keith"
+                 :certificates ["Arquitetura" "Gastronomia"]}])
+
+(defn count-certificates
+  [person]
+  (count (:certificates person)))                           ; Prefix way
+
+; OR using
+
+(defn count-certificates
+  [person]
+  (-> person
+      :certificates
+      count))                                               ; Threading first
+
+(println (->> customers
+              (map count-certificates)
+              (reduce +)))
+
+
+
+; Better way doing directly...
+(println (->> customers
+              (map :certificates)
+              (map count)
+              (reduce +)))
