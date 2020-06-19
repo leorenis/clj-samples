@@ -67,6 +67,8 @@
             :t-shirt {:amount 3 :price 60}
             :coffee-mug {:amount 1}})
 (defn free?
-  [product]
-  (<= (get product :price 0) 0))
-(println (free? (:coffee-mug order)))                       ; Like a test rsr
+  [[key value]]
+  (<= (get value :price 0) 0))
+(println (free? (first order)))                       ; Like a test rsr
+(println "Filtering free products")
+(println (filter free? order))
