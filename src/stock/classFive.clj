@@ -26,6 +26,7 @@
 (println (order :bag))                                      ; using map as function. If order is nil. Throws a NullPointerException here.
 (println (get order :bag))                                  ; using get function... More safely
 (println (get order :bag {}))                               ; get with default value
+; PREFIX WAY
 (println (:amount (:bag order)))
 (println (:amount (:chair order {})))                       ; Trying to access the  order's keywords :chair, :amount, if does not exists, take empty object. Like {}
 
@@ -36,3 +37,5 @@
            order
            :bag
            :amount))
+
+(-> order :bag :amount println)
