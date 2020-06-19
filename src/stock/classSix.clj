@@ -77,6 +77,19 @@
 (defn free?
   [value]
   (<= (get value :price 0) 0))
-(println (filter (fn [[key value]] (free? value)) order))   ; anonymous function
 
+(println (filter (fn [[key value]] (free? value)) order))   ; anonymous function
 (println (filter #(free? (second %)) order))                ; lambda fn
+
+
+(defn paid?
+  [value]
+  not (free? value))
+(println "Using paid? predicate.")
+(println (paid? {:price 50}))
+(println (paid? {:price 0}))
+
+; Functions Composition
+(def paid? (comp not free?))                                ; Symbol paid
+(println (paid? {:price 10}))
+(println (paid? {:price 0}))
