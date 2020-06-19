@@ -23,8 +23,16 @@
             :tshirt {:amount 3 :price 60}})
 
 (println order)
-(println (order :bag))                                      ; using map as function
+(println (order :bag))                                      ; using map as function. If order is nil. Throws a NullPointerException here.
 (println (get order :bag))                                  ; using get function... More safely
 (println (get order :bag {}))                               ; get with default value
 (println (:amount (:bag order)))
 (println (:amount (:chair order {})))                       ; Trying to access the  order's keywords :chair, :amount, if does not exists, take empty object. Like {}
+
+(println (update-in order [:bag :amount] inc))
+
+;THREADING, CHAIN...
+(println (->
+           order
+           :bag
+           :amount))
