@@ -31,3 +31,31 @@
   (* (:amount value) (:price value)))
 (println (map products-price order))
 (println (reduce + (map products-price order)))
+
+(defn total-by-order
+  [order]
+  (reduce + (map products-price order)))
+(println (total-by-order order))
+
+
+; THREADING LAST
+(defn total-by-order
+  [order]
+  (->> order
+       (map products-price)
+       (reduce +)))
+(println (total-by-order order))
+
+
+
+; A little bit more polite function
+(defn products-total-price [product]                            ; Ignoring key with blank identifier.
+  (* (:amount product) (:price product)))
+
+(defn total-by-order
+  [order]
+  (->> order
+       vals
+       (map products-total-price)
+       (reduce +)))
+(println (total-by-order order))
