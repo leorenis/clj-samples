@@ -72,3 +72,11 @@
 (println (free? (first order)))                       ; Like a test rsr
 (println "Filtering free products")
 (println (filter free? order))
+
+
+(defn free?
+  [value]
+  (<= (get value :price 0) 0))
+(println (filter (fn [[key value]] (free? value)) order))   ; anonymous function
+
+(println (filter #(free? (second %)) order))                ; lambda fn
