@@ -8,3 +8,11 @@
 (println (next []))
 (println (seq [1 2 3 4]))     ; Create a seq with elements
 (println (seq []))            ; When empty, returns nil
+
+
+(defn custom-map
+  [func sequence]
+  (let [f (first sequence)]
+    (func f)))
+
+(custom-map println ["John" "Doe" "Peter"])
