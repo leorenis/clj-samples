@@ -13,6 +13,12 @@
 (defn custom-map
   [func sequence]
   (let [f (first sequence)]
-    (func f)))
+    (func f)
+    (if (nil? f)
+      (do
+        (func f)
+        (custom-map func (rest sequence))))))
 
 (custom-map println ["John" "Doe" "Peter"])
+
+;(custom-map println (range 100000))
