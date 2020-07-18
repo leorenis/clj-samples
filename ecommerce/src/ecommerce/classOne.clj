@@ -11,4 +11,4 @@
 
 (custom-map println ["John" "Doe" "Peter"])
 
-(custom-map println (range 10000))
+; (custom-map println (range 10000))
