@@ -30,3 +30,13 @@
 
 (println (custom-count 0 ["John" "Doe"]))                   ; passing two parameters
 (println (custom-count []))                                 ;  passing only elements
+
+
+; Using loop
+(defn custom-count-loop
+  [elements]
+   (loop [total 0
+          rest-elements elements]
+     (if (seq rest-elements)
+       (recur (inc total) (next rest-elements))             ; recur call the function loop passing the arguments redefining them.
+       total)))
