@@ -35,6 +35,7 @@
 ; Using loop
 (defn custom-count-loop
   [elements]
+  ; (println "Bad practice...")                               ; This function use loop, only because we have some code before or after the loop... For this reason we've decided for loop instead a tail recur function.
    (loop [total 0
           rest-elements elements]
      (if (seq rest-elements)
