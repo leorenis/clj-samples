@@ -40,3 +40,6 @@
      (if (seq rest-elements)
        (recur (inc total) (next rest-elements))             ; recur call the function loop passing the arguments redefining them.
        total)))
+
+
+(println (custom-count-loop ["John" "Doe"]))
