@@ -19,6 +19,6 @@
         (func f)
         (custom-map func (rest sequence))))))
 
-(custom-map println ["John" "Doe" "Peter"])
+(custom-map println ["John" "Doe" "Peter", "Mark"])
 
-;(custom-map println (range 100000))
+;(custom-map println (range 10000))
