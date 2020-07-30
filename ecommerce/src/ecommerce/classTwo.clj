@@ -29,7 +29,7 @@
      total)))
 
 (println (custom-count 0 ["John" "Doe"]))                   ; passing two parameters
-(println (custom-count []))                                 ;  passing only elements
+(println (custom-count []))                                 ; passing only elements
 
 
 ; Using loop
@@ -43,4 +43,4 @@
        total)))
 
 
-(println (custom-count-loop ["John" "Doe"]))
+(println (custom-count-loop ["John" "Doe", "Mark"]))
