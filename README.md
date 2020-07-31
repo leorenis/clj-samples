@@ -1,2 +1,2 @@
 # clj-samples
-Clujure samples created to save the clojure learning.
+Clujure-samples is a personal project created to save the clojure learning.
