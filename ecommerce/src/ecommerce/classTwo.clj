@@ -6,7 +6,7 @@
     (recur (inc total) (next elements))
     total))
 
-(println (custom-count 0 ["John" "Doe"]))
+(println (custom-count 0 ["John" "Doe" "Ken"]))
 
 ; Test functions variations
 
@@ -28,7 +28,7 @@
      (recur (inc total) (next elements))
      total)))
 
-(println (custom-count 0 ["John" "Doe"]))                   ; passing two parameters
+(println (custom-count 0 ["John" "Doe" "Sammar"]))                   ; passing two parameters
 (println (custom-count []))                                 ; passing only elements
 
 
