@@ -9,7 +9,7 @@
         (func f)
         (recur func (rest sequence))))))                    ; recur fn must be the last stub of function before return. recur convert recursion in loop.
 
-(custom-map println ["John" "Doe" "Peter", "Mark" "Mary"])
+(custom-map println ["John" "Doe", "Mark" "Mary"])
 
 ; (custom-map println (range 10000))
 
