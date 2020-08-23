@@ -27,10 +27,10 @@
 
 (def order5 {:user 25
               :items {:bag {:id :bag :amount 7 :unit-price 60}
-                      :shirt {:id :shirt :amount 16 :unit-price 60}
+                      :shirt {:id :shirt :amount 19 :unit-price 60}
                       :shoes {:id :shoes :amount 3 :unit-price 69}}})
 
-(def order6 {:user 30
+(def order6 {:user 31
               :items {:bag {:id :bag :amount 15 :unit-price 90}
                       :shirt {:id :shirt :amount 12 :unit-price 100}
                       :shoes {:id :shoes :amount 8 :unit-price 84}}})
