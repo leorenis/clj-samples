@@ -6,9 +6,9 @@
                      :shoes {:id :shoes :amount 3 :unit-price 60}}})
 
 (def order1 {:user 10
-             :items {:bag {:id :bag :amount 5 :unit-price 86}
+             :items {:bag {:id :bag :amount 3 :unit-price 66}
                      :shirt {:id :shirt :amount 8 :unit-price 40}
-                     :shoes {:id :shoes :amount 5 :unit-price 60}}})
+                     :shoes {:id :shoes :amount 4 :unit-price 70}}})
 
 (def order2 {:user 5
               :items {:bag {:id :bag :amount 2 :unit-price 80}
@@ -17,7 +17,7 @@
 
 (def order3 {:user 2
               :items {:bag {:id :bag :amount 10 :unit-price 55}
-                      :shirt {:id :shirt :amount 6 :unit-price 60}
+                      :shirt {:id :shirt :amount 5 :unit-price 60}
                       :shoes {:id :shoes :amount 15 :unit-price 63}}})
 
 (def order4 {:user 20
