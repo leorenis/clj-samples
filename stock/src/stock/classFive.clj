@@ -9,7 +9,7 @@
 (println (assoc stock :sock 2))
 
 (defn less-one
-  "Take less one."
+  "Take less one..."
   [value]
   (println "Taking 1")
   (- value 1))
@@ -32,7 +32,7 @@
 
 (println (update-in order [:bag :amount] inc))
 
-;THREADING, CHAIN...
+;THREADING, CHAIN....
 (println (->
            order
            :bag
