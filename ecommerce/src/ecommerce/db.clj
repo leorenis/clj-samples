@@ -1,11 +1,11 @@
 (ns ecommerce.db)
 
-(def order {:user 10
+(def order {:user 12
              :items {:bag {:id :bag :amount 5 :unit-price 82}
                      :shirt {:id :shirt :amount 4 :unit-price 40}
                      :shoes {:id :shoes :amount 6 :unit-price 56}}})
 
-(def order1 {:user 12
+(def order1 {:user 10
              :items {:bag {:id :bag :amount 5 :unit-price 22}
                      :shirt {:id :shirt :amount 6 :unit-price 40}
                      :shoes {:id :shoes :amount 11 :unit-price 70}}})
